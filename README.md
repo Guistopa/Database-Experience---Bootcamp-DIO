@@ -1,4 +1,4 @@
-# Database-Experience- Bootcamp-DIO
+# Database-Experience - Bootcamp-DIO
 Desafio DIo Banco de Dados Ecommerce
 Sobre
 O desafio propõe a análise de um cenário em que a empresa fictícia ECOMMERCE Loja Mais Barato busca agragar as informações sobre suas vendas. Desse modo, se faz necessario a criação de um banco de dados que possui as entidades produto, estoque, fornecedor, pedido e cliente. Assim, é desafiado ao participante a execução da criação de um projeto conceitual a partir de um modelo ER.
