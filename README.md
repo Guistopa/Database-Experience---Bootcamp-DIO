@@ -35,3 +35,40 @@ Cliente PJ e PF – Uma conta pode ser PJ ou PF, mas não pode ter as duas infor
 Pagamento – Pode ter cadastrado mais de uma forma de pagamento, sendo definido a opção de registrar apenas 1 informação por método;
 Entrega – Possui status, código de rastreio e data máxima de entrega;
 O resultado desse processose encontra no arquivo Desafio Ecomerce Banco de Dados. png
+
+
+
+Segundo Desafio - Oficina  Motocar
+
+Administrar uma oficina mecânica tem especificidades que outro negócio não tem, como o conhecimento técnico, mas a base é a mesma de qualquer empreendimento. Além de prestar um bom serviço, o negócio de carros exige boa apresentação, bom atendimento e conhecimentos de gestão. É um desafio diário, que exige comprometimento do proprietário. Assim, a empresa CENTROCAR percebeu a necessidade de criar e manter um banco de dados com o intuito de auxiliar uma tomada de decisão orientada por dados. Desse modo, foi contruido de acordo com as necessidades da empresa o seguinte modelo conceitual:
+
+Ficha do Veículo
+
+Placa VARCHAR(7): É a chave primária dessa entidade;
+Modelo VARCHAR(45): Armazena o modelo do carro;
+Ano YEAR: Armazena o ano de fabricação do carro;
+Características gerais do veículo VARCHAR(45) (câmbio, combustível, pneus, etc): Armazena características das peças do carro.
+
+Clientes
+
+CPF VARCHAR(11): É a chave primária dessa entidade e tem o propósito da identificação do cliente;
+IdentidadeVARCHAR(12): identificação do cliente;
+PagamentoVARCHAR(16): Método de pagamento escolhido, possui quatro variáveis: cartão de débito, cartão crédito, dinheiro, pix;
+
+Serviço
+
+Natureza do serviço BIT(8): Descreve qual o tipo de serviço foi requerido pelo cliente, sendo as opções:Reparos automotivos (1), Troca de óleo (2),Alinhamento e, balanceamento (3), Manutenção de embreagem (4), Revisão dos componentes de freio (5), Checagem do nível de água no radiador (6), Revisão Geral (7), outro (8). Os dados serão armazenados de acordo com a numeração de cada tipo, sendo assim, 0 a 7;
+Urgência BIT(2): Descreva se o serviço precisa ser realizado com urgência. Tem como data type boolean, sendo 0 'sem urgência' e 1 'com urgência';
+Descrição do serviço VARCHAR(256): Descreve alguma especificação sobre o serviço (opcional). Orçamento
+Peças BIT(2) (câmbio, combustível, pneus, etc): Descreve se o foi comprado/consertado determinada peça do carro. Tem como data type boolean, sendo 0 'não trocou' e 1 'trocou', existe um atributo para cada peça;
+Mão de obra BIT(4): descreve o valor da mão de obra de acordo com tempo estimado que será necessário para o concerto. Desse modo, os dados serão armazenados de 0 a 3 e que indicam as seguintes informações 1-7 dias (1), 8-14 dias (2), 9-21 dias (3), > 1 mês (4);
+
+Equipe
+
+Numero de Funcionarios INT: Descreve quantos funcionários tem na equipe;
+Especialidade VARCHAR(45): Descreve a especialidade da equipe;
+Relacionamento: Valor do Pagamento
+Preço DOUBLE: descreve o valor total a ser pago apartir das variaveis serviço e orçamento.
+
+Resultado
+A seguir se encontra o resultado do  desafio pode ser observado no Arquivo 2°  Desafio Ecomerce Banco de Dados.png
